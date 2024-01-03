@@ -9,7 +9,7 @@ function getRandomSize(min, max) {
 }
 
 function createBoxes(amount) {
-  const boxesContainer = document.getElementById('boxes');
+  const boxesContainer = document.querySelector('#boxes'); // Fix: Use #boxes to select by ID
   boxesContainer.innerHTML = '';
 
   for (let i = 0; i < amount; i++) {
@@ -24,7 +24,7 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  const boxesContainer = document.getElementById('boxes');
+  const boxesContainer = document.querySelector('#boxes'); // Fix: Use #boxes to select by ID
   boxesContainer.innerHTML = '';
 }
 

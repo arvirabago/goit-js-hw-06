@@ -1,3 +1,6 @@
+
+// Array of image objects with URL and alt text
+
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -13,9 +16,11 @@ const images = [
   },
 ];
 
+// Select the DOM element with the class 'gallery' and store it in the galleryList variable
 
 const galleryList = document.querySelector('.gallery');
 
+// Generate HTML markup for each image use map 
 
 const galleryMarkup = images.map((image) => `
   <li class="gallery-item">
@@ -23,5 +28,6 @@ const galleryMarkup = images.map((image) => `
   </li>
 `).join('');
 
+// Insert the generated HTML markup into the galleryList before the end of its content
 
 galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
